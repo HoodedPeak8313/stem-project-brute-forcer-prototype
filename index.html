@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            
+        </script>
+    </head>
+
+    <body>
+        <ul>
+            <input id="psInpBx"/>
+            <button id="inpBtn">Check</button>
+        </ul>
+        <script type="text/javascript">
+            var rLim = 0
+            document.getElementById("inpBtn").addEventListener("click", function() {
+                if (document.getElementById("psInpBx").value === "3809") {
+                    alert("YEAAHH!! YOU DID IT!!!!") // 3809
+                } else {
+                    console.log("nah fam that aint it")
+                    if (rLim < 5) {
+                        rLim += 1
+                    } else if (rLim === 5) {
+                        setTimeout("alert('stop, you are violating the law')", 1)
+                        console.log("hopefully async!")
+                        document.getElementById("inpBtn").setAttribute("disabled","")
+                        setTimeout(function() { document.getElementById("inpBtn").removeAttribute("disabled") }, 10000)
+                        /*start = Date.now(),
+                        now = start;
+                        while (now - start < 10000) {
+                            now = Date.now();
+                        }*/
+                        rLim = 0
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
