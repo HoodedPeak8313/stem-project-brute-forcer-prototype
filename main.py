@@ -9,7 +9,7 @@ import time
 import datetime
 
 driver = webdriver.Chrome()
-driver.get("C://Users\littl\Desktop\Stem Project\index.html")
+driver.get("PUT YOUR PATH OF THE HTML FILE HERE WITH C:// INSTEAD OF C:\ ")
 
 wait = WebDriverWait(driver, 10)
 wait.until(EC.presence_of_element_located((By.ID, "psInpBx")))
